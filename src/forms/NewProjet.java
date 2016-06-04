@@ -721,7 +721,7 @@ enviar1();
             JOptionPane.showMessageDialog(null, "Registro Guardado con Exito");
             
             }
-            //Mostrardatos();
+            Mostrardatos();
         } catch (SQLException ex) {
             Logger.getLogger(NewGroup.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -914,6 +914,7 @@ jButton7.setEnabled(false);
         {
             JOptionPane.showMessageDialog(rootPane,"Dato eliminado");
         }
+        limpiar();
         Mostrardatos();
     }
     else

@@ -69,10 +69,7 @@ public class Reporte_Grupo extends javax.swing.JFrame {
         
     }
        
-    
-    
-   
-    
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -224,9 +221,6 @@ public class Reporte_Grupo extends javax.swing.JFrame {
 
     private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
 ordenar("");   
-           
-
-
 // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1MouseClicked
 

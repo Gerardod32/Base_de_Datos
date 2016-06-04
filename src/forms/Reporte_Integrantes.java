@@ -157,6 +157,11 @@ public class Reporte_Integrantes extends javax.swing.JFrame implements Printable
         });
 
         jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -355,6 +360,10 @@ public class Reporte_Integrantes extends javax.swing.JFrame implements Printable
     private void rutafotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutafotoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rutafotoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
  void Nombre(String valor){
    DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("id");

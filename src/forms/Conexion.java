@@ -20,7 +20,7 @@ Connection conect = null;
              
            //Cargamos el Driver MySQL
            Class.forName("com.mysql.jdbc.Driver");
-           conect = DriverManager.getConnection("jdbc:mysql://localhost/mydb","BIMAR","A0E9M0L3N");
+           conect = DriverManager.getConnection("jdbc:mysql://localhost/mydb","bimar","A0E9M0L3N");
            //JOptionPane.showMessageDialog(null, "conectado");
            //Cargamos el Driver Access
            //Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");

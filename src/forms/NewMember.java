@@ -46,6 +46,7 @@ public class NewMember extends javax.swing.JDialog {
         write_group.add(jRadioButton5);
         Inventario("");
         Combo1();
+        Combo2();
     }
 
     /**
@@ -154,6 +155,7 @@ public class NewMember extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Nueva Integrante");
+        setBackground(java.awt.SystemColor.inactiveCaption);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setSize(new java.awt.Dimension(5, 5));
 
@@ -163,6 +165,7 @@ public class NewMember extends javax.swing.JDialog {
         imagen.setText("Imagen");
         imagen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jPanel6.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
 
         jRadioButton4.setText("SI");
@@ -205,6 +208,7 @@ public class NewMember extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
 
         jRadioButton2.setText("SI");
@@ -247,6 +251,7 @@ public class NewMember extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
 
         jLabel20.setText("Idioma:");
@@ -283,6 +288,7 @@ public class NewMember extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
 
         jLabel14.setText("Estado civil");
@@ -314,7 +320,7 @@ public class NewMember extends javax.swing.JDialog {
 
         est_civil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Soltera", "Casada", "Viuda", "Divorciada" }));
 
-        grupo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Listado de grupos", "1", "2" }));
+        grupo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Listado de grupos", " " }));
 
         religion.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Evangélica", "Católica", "Mormona", "Ninguna", " " }));
         religion.addActionListener(new java.awt.event.ActionListener() {
@@ -418,6 +424,7 @@ public class NewMember extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel4.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
 
         nom1.addActionListener(new java.awt.event.ActionListener() {
@@ -581,6 +588,7 @@ public class NewMember extends javax.swing.JDialog {
             }
         });
 
+        jPanel5.setBackground(java.awt.SystemColor.inactiveCaption);
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
         jButton2.setText("Cancelar");
@@ -716,7 +724,7 @@ public class NewMember extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 458, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fotodpi, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -960,6 +968,29 @@ nacimiento.setText(fecha);
             nombre p = new nombre();
             p.setNombre(rs.getString("nombre"));
             proyect.addItem(p);
+                }
+        
+        
+        }catch (SQLException ex) {
+            Logger.getLogger(NewMember.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }
+    
+     void Combo2(){
+        
+        ResultSet rs;
+        String sql= "SELECT * FROM grupo";
+        PreparedStatement sqls = null;
+        try {
+            sqls = reg.prepareStatement(sql);
+        
+        
+            rs=sqls.executeQuery();
+        
+     while(rs.next()){
+            nombre p = new nombre();
+            p.setNombre(rs.getString("id"));
+            grupo.addItem(p);
                 }
         
         
